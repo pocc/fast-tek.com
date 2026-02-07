@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Orange/red engineering background -->
+  <rect width="64" height="64" fill="#FF6B35"/>
+  <!-- Wrench icon -->
+  <path d="M 25 45 L 30 50 L 45 35 L 50 35 L 55 30 L 50 25 L 45 30 L 45 35 Z" fill="#333"/>
+  <circle cx="22" cy="42" r="8" fill="#333" stroke="#555" stroke-width="2"/>
+  <circle cx="22" cy="42" r="4" fill="none" stroke="#777" stroke-width="2"/>
+  <!-- Bolt head for contrast -->
+  <path d="M 48 28 L 52 28 L 52 32 L 48 32 Z" fill="#666"/>
+</svg>
