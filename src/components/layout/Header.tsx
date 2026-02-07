@@ -12,6 +12,12 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="bg-brand-dark text-white">
+      <div className="border-b border-white/10 py-2 text-center text-sm text-white/80">
+        Call us for a free, no-obligation discussion of your sampling or remediation project:{" "}
+        <a href="tel:5102322728" className="underline underline-offset-2">
+          (510) 232-2728
+        </a>
+      </div>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link to="/" className="text-xl font-bold tracking-wide">
           FAST-TEK

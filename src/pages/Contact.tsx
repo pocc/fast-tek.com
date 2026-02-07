@@ -26,48 +26,96 @@ export default function Contact() {
   }
 
   return (
-    <section className="mx-auto max-w-2xl px-4 py-16">
+    <div className="mx-auto max-w-4xl px-4 py-16">
       <h1 className="mb-8 text-3xl font-bold">Contact Us</h1>
 
-      {status === "sent" ? (
-        <p className="rounded bg-green-50 p-4 text-green-800">
-          Thank you! We will be in touch shortly.
-        </p>
-      ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            name="name"
-            type="text"
-            placeholder="Your Name"
-            required
-            className="rounded border px-3 py-2"
-          />
-          <input
-            name="email"
-            type="email"
-            placeholder="Email Address"
-            required
-            className="rounded border px-3 py-2"
-          />
-          <textarea
-            name="message"
-            placeholder="How can we help?"
-            rows={5}
-            required
-            className="rounded border px-3 py-2"
-          />
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="rounded bg-brand-dark px-6 py-2 font-medium text-white hover:opacity-90 disabled:opacity-50"
-          >
-            {status === "sending" ? "Sending..." : "Send Message"}
-          </button>
-          {status === "error" && (
-            <p className="text-sm text-red-600">Something went wrong. Please try again.</p>
+      <div className="grid gap-10 md:grid-cols-2">
+        <div>
+          {status === "sent" ? (
+            <p className="rounded bg-green-50 p-4 text-green-800">
+              Thank you! We will be in touch shortly.
+            </p>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <input
+                name="name"
+                type="text"
+                placeholder="Your Name"
+                required
+                className="rounded border px-3 py-2"
+              />
+              <input
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                required
+                className="rounded border px-3 py-2"
+              />
+              <textarea
+                name="message"
+                placeholder="How can we help?"
+                rows={5}
+                required
+                className="rounded border px-3 py-2"
+              />
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="rounded bg-brand-dark px-6 py-2 font-medium text-white hover:opacity-90 disabled:opacity-50"
+              >
+                {status === "sending" ? "Sending..." : "Send Message"}
+              </button>
+              {status === "error" && (
+                <p className="text-sm text-red-600">Something went wrong. Please try again.</p>
+              )}
+            </form>
           )}
-        </form>
-      )}
-    </section>
+        </div>
+
+        <div className="space-y-6">
+          <div>
+            <h2 className="mb-2 font-bold">Address</h2>
+            <address className="not-italic text-gray-700">
+              FAST-TEK Engineering Support Services<br />
+              247A Tewksbury Avenue<br />
+              Point Richmond, CA 94801
+            </address>
+          </div>
+
+          <div>
+            <h2 className="mb-2 font-bold">Phone</h2>
+            <p className="text-gray-700">
+              Tel: <a href="tel:5102322728" className="text-brand-dark hover:underline">(510) 232-2728</a>
+            </p>
+            <p className="text-gray-700">
+              Fax: <a href="tel:5102322823" className="text-brand-dark hover:underline">(510) 232-2823</a>
+            </p>
+            <p className="text-gray-700">
+              Cell: <a href="tel:5105901099" className="text-brand-dark hover:underline">(510) 590-1099</a>
+            </p>
+          </div>
+
+          <div>
+            <h2 className="mb-2 font-bold">Email</h2>
+            <p>
+              <a href="mailto:info@fast-tek.com" className="text-brand-dark hover:underline">info@fast-tek.com</a>
+            </p>
+            <p>
+              <a href="mailto:geojimj@gmail.com" className="text-brand-dark hover:underline">geojimj@gmail.com</a>{" "}
+              <span className="text-sm text-gray-500">(James Jacobs)</span>
+            </p>
+          </div>
+
+          <div>
+            <h2 className="mb-2 font-bold">Hours</h2>
+            <ul className="text-gray-700">
+              <li>Mon–Fri: 9:00 AM – 5:00 PM</li>
+              <li>Sat: By Appointment</li>
+              <li>Sun: Closed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

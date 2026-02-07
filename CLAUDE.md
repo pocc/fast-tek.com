@@ -50,3 +50,5 @@ npm run typecheck    # TypeScript type checking (tsc --noEmit)
 ### Content & Business Context
 9. **Brand voice** — FAST-TEK is a professional engineering services company. Maintain formal, technical tone in all copy.
 10. **Pages to implement:** Home, About, Services, Projects, Books, Contact (with form submission).
+
+- Do not include 'Co-Authored-By' trailers or any AI attribution in git commit messages.

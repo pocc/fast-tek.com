@@ -36,13 +36,29 @@
 └─────────────────────────────────────────────────────────┘
 ```
 
+## `/demo` Sub-Path (Side-by-Side Migration)
+
+The React app is mounted under `/demo` so it runs alongside the legacy GoDaddy site at `/`.
+
+| Config | Value | Purpose |
+|--------|-------|---------|
+| `vite.config.ts` → `base` | `"/demo/"` | Assets load from `/demo/assets/...` |
+| `vite.config.ts` → `build.outDir` | `"dist/demo"` | Build output lands at `dist/demo/` |
+| `src/main.tsx` → `BrowserRouter basename` | `"/demo"` | All routes prefixed with `/demo` |
+| `public/_redirects` | `/demo/* /demo/index.html 200` | SPA fallback for client-side routing |
+
+**Build script:** `rm -rf dist && vite build && mv dist/demo/_redirects dist/_redirects`
+
+The `_redirects` file must be at `dist/_redirects` (Cloudflare Pages root), not inside `dist/demo/`. Vite copies `public/` into `outDir` (`dist/demo/`), so the build script moves it after.
+
 ## Frontend — Cloudflare Pages (Vite + React)
 
 - **Build tool:** Vite 5 — bundles the React SPA for production
-- **Routing:** React Router v6 — client-side navigation between pages
-- **Pages:** Home (`/`), About (`/about`), Services (`/services`), Projects (`/projects`), Books (`/books`), Contact (`/contact`)
-- **Deployment:** `npm run build` outputs to `dist/`, which Cloudflare Pages serves at the edge
+- **Routing:** React Router v6 with `basename="/demo"` — client-side navigation between pages
+- **Pages:** Home (`/demo`), About (`/demo/about`), Services (`/demo/services`), Projects (`/demo/projects`), Books (`/demo/books`), Contact (`/demo/contact`)
+- **Deployment:** `npm run build` outputs to `dist/demo/`, which Cloudflare Pages serves at the edge under `/demo`
 - **Assets:** Static images and documents stored in R2, referenced via public URLs or a signed-URL worker
+- **Links:** Components use paths like `to="/"`, `to="/contact"` — React Router resolves relative to basename automatically
 
 ## Backend — Pages Functions (Hono)
 
