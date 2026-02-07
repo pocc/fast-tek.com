@@ -11,19 +11,19 @@ ENVIRONMENT = "production"
 # ── D1 Database ──────────────────────────────────────────
 # Create with: wrangler d1 create fast-tek-db
 # Then paste the database_id below.
-[[d1_databases]]
-binding = "DB"
-database_name = "fast-tek-db"
-database_id = "" # TODO: wrangler d1 create fast-tek-db
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "fast-tek-db"
+# database_id = "" # TODO: wrangler d1 create fast-tek-db
 
 # ── R2 Bucket ────────────────────────────────────────────
 # Create with: wrangler r2 bucket create fast-tek-assets
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "fast-tek-assets"
+# [[r2_buckets]]
+# binding = "BUCKET"
+# bucket_name = "fast-tek-assets"
 
 # ── KV Namespace ─────────────────────────────────────────
 # Create with: wrangler kv namespace create CACHE
-[[kv_namespaces]]
-binding = "CACHE"
-id = "" # TODO: wrangler kv namespace create CACHE
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "" # TODO: wrangler kv namespace create CACHE
