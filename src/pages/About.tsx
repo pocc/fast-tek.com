@@ -68,7 +68,7 @@ export default function About() {
 
       <section className="mb-12">
         <img
-          src="/images/team.webp"
+          src={`${import.meta.env.BASE_URL}images/team.webp`}
           alt="FAST-TEK team"
           className="mb-6 w-full rounded-lg"
         />

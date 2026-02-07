@@ -5,7 +5,7 @@ const books = [
     publisher: "Wiley",
     pages: 576,
     year: 2019,
-    image: "/images/Slide1.JPG",
+    image: `${import.meta.env.BASE_URL}images/Slide1.JPG`,
     amazonUrl:
       "https://www.amazon.com/Environmental-Considerations-Associated-Fracturing-Operations/dp/1119336090/",
     description:
@@ -17,7 +17,7 @@ const books = [
     publisher: "McGraw-Hill",
     pages: 578,
     year: 2014,
-    image: "/images/Slide2-0002.JPG",
+    image: `${import.meta.env.BASE_URL}images/Slide2-0002.JPG`,
     amazonUrl: "https://www.amazon.com/s?k=jacobs+testa+oil+spills",
     description:
       "Covers environmental response, prevention, and cost recovery for oil spills and gas leaks.",
@@ -28,7 +28,7 @@ const books = [
     publisher: "Wiley",
     pages: 520,
     year: 2014,
-    image: "/images/Slide3-0002.JPG",
+    image: `${import.meta.env.BASE_URL}images/Slide3-0002.JPG`,
     amazonUrl: "https://www.amazon.com/s?k=jacobs+testa+acid+mine+drainage",
     description:
       "Jacobs co-authored 18 of 36 chapters. Part I: Causes of Acid Mine Drainage focuses on biogeochemistry. Part II–III cover assessment and case studies. Part IV: Remediation examines passive and active cleanup methods.",
@@ -39,7 +39,7 @@ const books = [
     publisher: "CRC Press",
     pages: 800,
     year: 2004,
-    image: "/images/Slide4-0001.JPG",
+    image: `${import.meta.env.BASE_URL}images/Slide4-0001.JPG`,
     amazonUrl: "https://www.amazon.com/s?k=jacobs+chromium+book",
     description:
       "Comprehensive resource on hexavalent chromium. Features chapters on chromium sources, geology and geochemistry, toxicity, treatment, remediation, legal issues, and recommendations.",
@@ -50,7 +50,7 @@ const books = [
     publisher: "CRC Press",
     pages: 264,
     year: 2001,
-    image: "/images/Slide5-0001.JPG",
+    image: `${import.meta.env.BASE_URL}images/Slide5-0001.JPG`,
     amazonUrl: "https://www.amazon.com/s?k=jacobs+mtbe+book",
     description:
       "Covers the effects of methyl tertiary-butyl ether (MTBE) on soil and groundwater resources.",
@@ -64,7 +64,7 @@ export default function Books() {
 
       <div className="mb-10 flex items-start gap-6">
         <img
-          src="/images/Jim_Jacobs_headshot_230818.png"
+          src={`${import.meta.env.BASE_URL}images/Jim_Jacobs_headshot_230818.png`}
           alt="James A. Jacobs, Ph.D."
           className="h-48 w-40 flex-shrink-0 rounded-lg object-cover"
         />

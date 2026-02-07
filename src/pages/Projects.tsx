@@ -189,10 +189,10 @@ const categories: Category[] = [
 ];
 
 const images = [
-  { src: "/images/project-image-1.jpg", alt: "Subsurface investigation field work" },
-  { src: "/images/project-image-2.jpg", alt: "Drilling equipment on site" },
-  { src: "/images/project-image-3.jpg", alt: "Soil sampling in progress" },
-  { src: "/images/project-image-4.jpg", alt: "Monitoring well installation" },
+  { src: `${import.meta.env.BASE_URL}images/project-image-1.jpg`, alt: "Subsurface investigation field work" },
+  { src: `${import.meta.env.BASE_URL}images/project-image-2.jpg`, alt: "Drilling equipment on site" },
+  { src: `${import.meta.env.BASE_URL}images/project-image-3.jpg`, alt: "Soil sampling in progress" },
+  { src: `${import.meta.env.BASE_URL}images/project-image-4.jpg`, alt: "Monitoring well installation" },
 ];
 
 export default function Projects() {

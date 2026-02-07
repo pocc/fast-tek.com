@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 
 const cards = [
   {
-    image: "/images/home-image-1.jpg",
+    image: `${import.meta.env.BASE_URL}images/home-image-1.jpg`,
     title: "Remediation Experience",
     text: "Since 1990, The Auger Group, Inc. dba FAST-TEK Engineering Support Services has provided environmental and engineering remediation of contaminated soils and groundwater, waterproofing, erosion control, and site restoration to leading consultants and land owners. Our focus has been project-specific and we have developed long-term relationships with a variety of project owners over the years.",
   },
   {
-    image: "/images/home-image-2.jpg",
+    image: `${import.meta.env.BASE_URL}images/home-image-2.jpg`,
     title: "Project Management",
     text: "Contracting small and large assessment and remediation projects for engineering firms has been our specialty. Our project managers are focused on safety and compliance, directed by in-house Professional Geologists and environmental project managers. FAST-TEK provides professional staff for contracted projects and trained equipment operators.",
   },
   {
-    image: "/images/home-image-3.jpg",
+    image: `${import.meta.env.BASE_URL}images/home-image-3.jpg`,
     title: "Licenses & Expertise",
     text: "The Auger Group, Inc, dba FAST-TEK Engineering Support Services is licensed by the California Contractor State License Board (CSLB license #624461) for engineering contracting (A), building (B), water well drilling (C-57), hazardous material removal (HAZ), asbestos abatement (ASB) and home improvement contracting (HIC). The Auger Group, Inc., is certified as a Small Business (SB) Supplier #1467 with the State of California, Department of General Services (DGS).",
   },
@@ -24,7 +24,7 @@ export default function Home() {
       <section className="relative bg-brand-dark py-20 text-center text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url(/images/fast-tek_home_image.webp)" }}
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/fast-tek_home_image.webp)` }}
         />
         <div className="relative mx-auto max-w-4xl px-4">
           <h1 className="mb-4 text-4xl font-bold">
