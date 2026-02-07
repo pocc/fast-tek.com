@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler pages dev --compatibility-date=2024-12-01 -- npx vite",
-    "build": "rm -rf dist && vite build && mv dist/demo/_redirects dist/_redirects",
+    "build": "rm -rf dist && vite build && mv dist/demo/_redirects dist/_redirects && cp dist/demo/index.html dist/404.html",
     "preview": "wrangler pages dev dist",
     "deploy": "npm run build && wrangler pages deploy dist",
     "db:generate": "drizzle-kit generate",
