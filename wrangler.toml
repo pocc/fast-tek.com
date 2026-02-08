@@ -24,3 +24,7 @@ ENVIRONMENT = "production"
 # [[kv_namespaces]]
 # binding = "CACHE"
 # id = "" # TODO: wrangler kv namespace create CACHE
+
+[observability.logs]
+enabled = true
+invocation_logs = true
