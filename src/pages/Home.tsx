@@ -36,7 +36,7 @@ export default function Home() {
           </p>
           <Link
             to="/contact"
-            className="mt-6 inline-block rounded bg-white px-6 py-3 font-medium text-brand-dark hover:bg-white/90"
+            className="mt-6 inline-block rounded bg-white px-6 py-3 font-medium text-brand-dark transition-colors hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark"
           >
             Contact Us
           </Link>
@@ -46,7 +46,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="grid gap-8 md:grid-cols-3">
           {cards.map((card) => (
-            <div key={card.title} className="overflow-hidden rounded-lg border">
+            <div key={card.title} className="overflow-hidden rounded-lg border transition-shadow hover:shadow-lg">
               <img
                 src={card.image}
                 alt={card.title}

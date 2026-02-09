@@ -42,21 +42,21 @@ export default function Contact() {
                 type="text"
                 placeholder="Your Name"
                 required
-                className="rounded border px-3 py-2"
+                className="rounded border px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark"
               />
               <input
                 name="email"
                 type="email"
                 placeholder="Email Address"
                 required
-                className="rounded border px-3 py-2"
+                className="rounded border px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark"
               />
               <textarea
                 name="message"
                 placeholder="How can we help?"
                 rows={5}
                 required
-                className="rounded border px-3 py-2"
+                className="rounded border px-3 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark"
               />
               <button
                 type="submit"
@@ -88,7 +88,7 @@ export default function Contact() {
               Tel: <a href="tel:5102322728" className="text-brand-dark hover:underline">(510) 232-2728</a>
             </p>
             <p className="text-gray-700">
-              Fax: <a href="tel:5102322823" className="text-brand-dark hover:underline">(510) 232-2823</a>
+              Fax: (510) 232-2823
             </p>
             <p className="text-gray-700">
               Cell: <a href="tel:5105901099" className="text-brand-dark hover:underline">(510) 590-1099</a>

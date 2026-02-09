@@ -62,7 +62,7 @@ export default function Books() {
     <div className="mx-auto max-w-4xl px-4 py-16">
       <h1 className="mb-8 text-3xl font-bold">Books</h1>
 
-      <div className="mb-10 flex items-start gap-6">
+      <div className="mb-10 flex flex-col items-center gap-6 sm:flex-row sm:items-start">
         <img
           src={`${import.meta.env.BASE_URL}images/Jim_Jacobs_headshot_230818.png`}
           alt="James A. Jacobs, Ph.D."
@@ -81,11 +81,11 @@ export default function Books() {
 
       <div className="space-y-8">
         {books.map((book) => (
-          <div key={book.title} className="flex gap-6 rounded-lg border p-6">
+          <div key={book.title} className="flex flex-col gap-4 rounded-lg border p-6 sm:flex-row sm:gap-6">
             <img
               src={book.image}
               alt={book.title}
-              className="h-32 w-64 flex-shrink-0 rounded object-cover"
+              className="h-40 w-full rounded object-cover sm:h-32 sm:w-64 sm:flex-shrink-0"
             />
             <div>
               <h3 className="font-bold">{book.title}</h3>

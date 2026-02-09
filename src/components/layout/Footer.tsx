@@ -18,7 +18,7 @@ export default function Footer() {
                 Tel: <a href="tel:5102322728" className="hover:text-white">(510) 232-2728</a>
               </li>
               <li>
-                Fax: <a href="tel:5102322823" className="hover:text-white">(510) 232-2823</a>
+                Fax: (510) 232-2823
               </li>
               <li>
                 Cell: <a href="tel:5105901099" className="hover:text-white">(510) 590-1099</a>
