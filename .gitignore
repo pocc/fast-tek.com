@@ -1,16 +1,29 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
-.wrangler/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
 .dev.vars
-.mf/
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Vite
 *.local
 
-# Drizzle
-drizzle/meta/
+# Wrangler
+.wrangler/
 
-# IDE
-.vscode/
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
 .idea/
 *.swp
 *.swo
-.DS_Store

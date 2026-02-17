@@ -15,16 +15,13 @@ export default function Footer() {
             <h3 className="mb-3 font-bold">Contact</h3>
             <ul className="space-y-1 text-sm text-white/70">
               <li>
-                Tel: <a href="tel:5102322728" className="hover:text-white">(510) 232-2728</a>
-              </li>
-              <li>
-                Fax: (510) 232-2823
+                Tel: <a href="tel:5103079943" className="hover:text-white">(510) 307-9943</a>
               </li>
               <li>
                 Cell: <a href="tel:5105901099" className="hover:text-white">(510) 590-1099</a>
               </li>
               <li>
-                <a href="mailto:info@fast-tek.com" className="hover:text-white">info@fast-tek.com</a>
+                <a href="mailto:geojimj@gmail.com" className="hover:text-white">geojimj@gmail.com</a>
               </li>
             </ul>
           </div>

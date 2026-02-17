@@ -12,12 +12,13 @@ export default function Contact() {
     const data = Object.fromEntries(new FormData(form));
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://formsubmit.co/ajax/geojimj@gmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ ...data, _subject: `Contact form: ${data.name}`, _replyto: data.email }),
       });
-      if (!res.ok) throw new Error("Submission failed");
+      const result = ((await res.json()) as { success: string });
+      if (result.success !== "true") throw new Error("Submission failed");
       setStatus("sent");
       form.reset();
     } catch {
@@ -85,10 +86,7 @@ export default function Contact() {
           <div>
             <h2 className="mb-2 font-bold">Phone</h2>
             <p className="text-gray-700">
-              Tel: <a href="tel:5102322728" className="text-brand-dark hover:underline">(510) 232-2728</a>
-            </p>
-            <p className="text-gray-700">
-              Fax: (510) 232-2823
+              Tel: <a href="tel:5103079943" className="text-brand-dark hover:underline">(510) 307-9943</a>
             </p>
             <p className="text-gray-700">
               Cell: <a href="tel:5105901099" className="text-brand-dark hover:underline">(510) 590-1099</a>
@@ -97,9 +95,6 @@ export default function Contact() {
 
           <div>
             <h2 className="mb-2 font-bold">Email</h2>
-            <p>
-              <a href="mailto:info@fast-tek.com" className="text-brand-dark hover:underline">info@fast-tek.com</a>
-            </p>
             <p>
               <a href="mailto:geojimj@gmail.com" className="text-brand-dark hover:underline">geojimj@gmail.com</a>{" "}
               <span className="text-sm text-gray-500">(James Jacobs)</span>

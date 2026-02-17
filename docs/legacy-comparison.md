@@ -12,7 +12,7 @@ Side-by-side comparison of what exists in the legacy GoDaddy site vs. the new Re
 | Navigation | Home, About, Services, Projects, Contact, Books | Home, About, Services, Projects, Books, Contact | Present (order differs) |
 | Footer copyright | "Copyright 2025 FAST-TEK - All Rights Reserved." | Dynamic year + "FAST-TEK Engineering Support Services. All rights reserved." | Present |
 | Footer tagline | "Providing Environmental Contracting Since 1990" | None | MISSING |
-| Phone numbers | Tel: (510) 232-2728, Fax: (510) 232-2823, Cell: (510) 590-1099 | None | MISSING |
+| Phone numbers | Tel: (510) 232-2728, Cell: (510) 590-1099 | None | MISSING |
 | Email | info@fast-tek.com, geojimj@gmail.com | None | MISSING |
 | Address | 247A Tewksbury Avenue, Point Richmond, CA 94801 | None | MISSING |
 | Business hours | Mon-Fri 9-5, Sat by appointment, Sun closed | None | MISSING |
